@@ -1,8 +1,8 @@
 <?php
 
-include 'dbh.php';
-include 'products.php';
-include 'show.php';
+// include 'dbh.php';
+// include 'products.php';
+// include 'show.php';
 
 ?>
 
@@ -12,18 +12,20 @@ include 'show.php';
     </head>
     <body>
         <div class="page">
+            <form id="product_form" action="insert.php" method="POST">
             <div class="head">
                 <h1>Add Product</h1>
                 <div class="menu">
-                <a href="add-product.php"><input type="submit" value="add"/></a>
-                <a href="add-product.php"><button>Cancel</button></a>
+                    <button class="button" type="submit">Add</button>
+                    <a href="index.php"><div class="button">Cancel</div></a>
                 </div>
             </div>
-
-            <form id="product_form" action="insert.php" method="post">
-                <span>SKU<input type='text' name="sku" id="sku"/></span><br/>
-                <span>Name<input type='text' name="name" id="name"/></span><br/>
-                <span>Price<input type='text' name="price" id="price"/></span><br/>
+                <span>SKU<input type='text' name="sku" id="sku" required
+                oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')"/></span><br/>
+                <span>Name<input type='text' name="name" id="name" required
+                oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')"/></span><br/>
+                <span>Price ($)<input type='text' name="price" id="price" required
+                oninvalid="this.setCustomValidity('Please, submit required data')" oninput="this.setCustomValidity('')"/></span><br/>
                 <span>Type switcher<select id="productType" name="productType">
                     <option id="dvd" value="dvd">DVD</option>
                     <option id="furniture" value="furniture">Furniture</option>

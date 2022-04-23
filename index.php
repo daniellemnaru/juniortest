@@ -15,17 +15,17 @@ include 'show.php';
             <div class="head">
                 <h1>Product List</h1>
                 <div class="menu">
-                    <a href="add-product.php"><button>ADD</button></a>
-                    <button id="delete-product-btn">MASS DELETE</button>
+                    <a href="add-product.php"><div class="button">ADD</div></a>
+                    <div class="button" id="delete-product-btn">MASS DELETE</div>
                 </div>
             </div>
             <div id="products">
-                <?php
+<?php
 
 $prods = new viewProducts();
 $prods->showAllProducts();
 
-                ?>
+?>
             </div>
         </div>
 </body>

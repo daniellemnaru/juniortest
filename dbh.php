@@ -14,6 +14,7 @@ class dbh{
 
         $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
         return $conn;
+        // $conn = mysqli_connect($servername,$username,$password,$dbname);
     }
 }
 

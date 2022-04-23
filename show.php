@@ -5,6 +5,7 @@ class viewProducts extends products{
         $datas = $this->getAllProducts();
         foreach($datas as $data){
             echo '<div class="prod"><p>';
+            echo '<input type="checkbox"/>';
             echo $data['SKU'] . '<br/>';
             echo $data['Name'] . '<br/>';
             echo $data['Price'] . ' $<br/>';
